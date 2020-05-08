@@ -962,11 +962,17 @@ Ext.define('Mfw.settings.Map', {
     toOptions: function (map) {
         var options = [], val;
         Ext.Object.each(map, function (key, value) {
-            val = isNaN(parseInt(key, 10)) ? key : parseInt(key, 10);
-            if (Ext.isObject(value)) {
-                options.push(value);
+
+            var uuidRe = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$");
+            if (uuidRe.test(key) ) {
+                options.push({text: value, value: key});
             } else {
-                options.push({ text: value, value: val });
+                val = isNaN(parseInt(key, 32)) ? key : parseInt(key, 32);
+                if (Ext.isObject(value)) {
+                    options.push(value);
+                } else {
+                    options.push({ text: value, value: val });
+                }
             }
         });
         return options;
