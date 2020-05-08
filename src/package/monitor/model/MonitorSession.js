@@ -85,8 +85,8 @@ Ext.define('Mfw.model.MonitorSession', {
 
         { name: 'ssl_sni', type: 'string', allowNull: true },
         { name: 'wan_rule_chain', type: 'string', allowNull: true },
-        { name: 'wan_rule_id', type: 'number', allowNull: true },
-        { name: 'wan_policy_id', type: 'number', allowNull: true },
+        { name: 'wan_rule_id', type: 'string', allowNull: true },
+        { name: 'wan_policy_id', type: 'string', allowNull: true },
 
         { name: 'tcp_state', type: 'number', allowNull: true },
         { name: 'timeout_seconds', type: 'number', allowNull: true },

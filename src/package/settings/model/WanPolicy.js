@@ -38,7 +38,7 @@ Ext.define('Mfw.model.WanPolicy', {
     idProperty: '_id',
     identifier: 'uuid',
     fields: [
-        { name: 'policyId', type: 'integer', allowNull: true },
+        { name: 'policyId', type: 'string', allowNull: true },
         { name: 'enabled', type: 'boolean', defaultValue: true },
         { name: 'description', type: 'string' },
         { name: 'type', type: 'string', defaultValue: 'SPECIFIC_WAN' }, // ["SPECIFIC_WAN", "BEST_OF", "BALANCE" ]

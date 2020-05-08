@@ -15,7 +15,7 @@ Ext.define('Mfw.model.table.Rule', {
     idProperty: '_id',
     identifier: 'uuid',
     fields: [
-        { name: 'ruleId', type: 'integer' },
+        { name: 'ruleId', type: 'string' },
         { name: 'enabled', type: 'boolean', defaultValue: true },
         { name: 'description', type: 'string' },
         { name: '_deleteSchedule', type: 'boolean', default: false },
