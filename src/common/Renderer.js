@@ -589,8 +589,8 @@ Ext.define('Mfw.Renderer', {
         var chain, rule;
 
         // for -2 = None, -1 = Cache
-        if (value === -2) { return 'None'; }
-        if (value === -1) { return 'Cache'; }
+        if (value === -2 || value == "-2") { return 'None'; }
+        if (value === -1 || value == "-1") { return 'Cache'; }
 
         // find the proper chain
         chain = Ext.Array.findBy(Map.wanRules, function(chain) {
